@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,244 +9,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f3f4f6;
         }
 
         .link-item a:hover {
-            color: #6366f1;
-            text-decoration: underline;
+            color: #4f46e5;
         }
+
         .collapsible-header {
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s ease;
         }
+
         .collapsible-header:hover {
-            background-color: #e0e7ff;
-        }
-        .link-list {
-            max-height: 1000px;
-            overflow: hidden;
-            transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.4s cubic-bezier(.4,0,.2,1);
-            opacity: 1;
-        }
-        .link-list.collapsed {
-            max-height: 0;
-            opacity: 0;
-            pointer-events: none;
-        }
-        .arrow-icon {
-            transition: transform 0.3s cubic-bezier(.4,0,.2,1);
-        }
-        .collapsible-header.collapsed .arrow-icon {
-            transform: rotate(-90deg);
-        }
-        /* Card hover */
-        .section-card:hover {
-            box-shadow: 0 8px 32px rgba(99,102,241,0.10);
-            border-color: #6366f1;
-        }
-    </style>
-</head>
-<body class="p-4 sm:p-8">
-
-    <!-- Profile Photo & Header Section -->
-    <div class="flex flex-col items-center mt-8">
-        <div class="relative group">
-            <img src="uploaded:IMG_7340 2.jpg" alt="Pratiba Raman's professional headshot"
-                class="w-36 h-36 rounded-full shadow-xl border-4 border-white object-cover transition-transform duration-300 group-hover:scale-105">
-            <div class="absolute bottom-0 right-0 bg-indigo-500 text-white text-xs px-3 py-1 rounded-full shadow-lg font-semibold group-hover:bg-indigo-600 transition">Portfolio</div>
-        </div>
-        <header class="mt-6 mb-10 text-center">
-            <h1 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2">PR, Communications, Branded Content,<br>Journalism & Social Media</h1>
-            <p class="text-base sm:text-lg text-indigo-600 font-medium tracking-wide">Pratiba Raman</p>
-        </header>
-    </div>
-
-    <!-- Portfolio Sections -->
-    <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-8 mt-8">
-        <div id="portfolio-sections" class="space-y-6">
-
-            <!-- UAE Media Links Section -->
-            <div class="section-card rounded-lg border border-gray-200 transition">
-                <div class="collapsible-header flex items-center justify-between p-4 bg-gray-100 rounded-t-lg">
-                    <h2 class="text-xl font-semibold text-gray-700">UAE Media Links</h2>
-                    <span class="arrow-icon text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="link-list p-4 bg-white rounded-b-lg collapsed">
-                    <ul class="space-y-3">
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.thefinance360.com/rent-vs-buy-in-dubai-2025-the-ultimate-debate-the-real-deal-dubai-finance-360/" class="text-indigo-500 font-medium">"Rent vs Buy in Dubai 2025: The Ultimate Debate"</a> -
-                            <span class="text-gray-500 text-sm">The Finance 360</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.thefinance360.com/dubais-1m-aed-homes-smart-investment-or-money-pit-the-real-deal-dubai-finance-360/" class="text-indigo-500 font-medium">"Dubai's $1M AED Homes: Smart Investment or Money Pit?"</a> -
-                            <span class="text-gray-500 text-sm">The Finance 360</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.thefinance360.com/the-real-deal-ep-3-dubai-off-plan-property-market-explained-ft-irram-al-ali-copy/" class="text-indigo-500 font-medium">"The Real Deal Ep 3: Dubai Off-Plan Property Market Explained"</a> -
-                            <span class="text-gray-500 text-sm">The Finance 360</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- PR Links Section -->
-            <div class="section-card rounded-lg border border-gray-200 transition">
-                <div class="collapsible-header flex items-center justify-between p-4 bg-gray-100 rounded-t-lg">
-                    <h2 class="text-xl font-semibold text-gray-700">PR Links</h2>
-                    <span class="arrow-icon text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="link-list p-4 bg-white rounded-b-lg collapsed">
-                    <ul class="space-y-3">
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.builtenvironmentme.com/top-stories/real-estate/how-technology-can-empower-sustainability-a-developer-s-perspective" class="text-indigo-500 font-medium">"How Technology Can Empower Sustainability: A Developer's Perspective"</a> -
-                            <span class="text-gray-500 text-sm">Built Environment ME</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.linkedin.com/posts/fakhruddinproperties_fakhruddinproperties-yousuffakhruddin-cbnme-activity-7360914026366738433-H-er/?utm_source=share&utm_medium=member_ios&rcm=ACoAABt3iLwBNZN9ApnVRBm4rD5A3mgMp7vjagM" class="text-indigo-500 font-medium">"Fakhruddin Properties & CBN ME Collaboration"</a> -
-                            <span class="text-gray-500 text-sm">LinkedIn</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.thefinance360.com/nyukt-ai-ceo-wins-indo-global-leaders-award/" class="text-indigo-500 font-medium">"Nyukt AI CEO Wins Indo-Global Leaders' Award"</a> -
-                            <span class="text-gray-500 text-sm">The Finance 360</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://press.fourseasons.com/kohsamui/hotel-news/" class="text-indigo-500 font-medium">"Four Seasons Koh Samui Hotel News"</a> -
-                            <span class="text-gray-500 text-sm">Four Seasons Press</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.instagram.com/p/Ce5hs_ZFid4/?igsh=MXJ3c3NhbGk0eDRhMg==" class="text-indigo-500 font-medium">"Hotel Spotlight on Instagram"</a> -
-                            <span class="text-gray-500 text-sm">Instagram</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Journo Links Section -->
-            <div class="section-card rounded-lg border border-gray-200 transition">
-                <div class="collapsible-header flex items-center justify-between p-4 bg-gray-100 rounded-t-lg">
-                    <h2 class="text-xl font-semibold text-gray-700">Journalist Links</h2>
-                    <span class="arrow-icon text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="link-list p-4 bg-white rounded-b-lg">
-                    <!-- Sub-categories (same structure, trimmed for brevity) -->
-                    <!-- News & Politics, Business Shows, Food, Lifestyle, Entertainment & Culture, Articles -->
-                    <!-- ... (keep your previous items here, unchanged except for removing summary buttons) ... -->
-                    <!-- Only the collapsed/expand logic and links remain -->
-                    <!-- For brevity, not repeating all links; use your original content without the summary buttons. -->
-                </div>
-            </div>
-
-            <!-- Social Media Content Section -->
-            <div class="section-card rounded-lg border border-gray-200 transition">
-                <div class="collapsible-header flex items-center justify-between p-4 bg-gray-100 rounded-t-lg">
-                    <h2 class="text-xl font-semibold text-gray-700">Social Media Content</h2>
-                    <span class="arrow-icon text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="link-list p-4 bg-white rounded-b-lg collapsed">
-                    <ul class="space-y-3">
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.instagram.com/reel/DNqBWKivwO-/?igsh=MTg4bDdnbW0wZGIydA%3D%3D" class="text-indigo-500 font-medium">Instagram Reel: DNqBWKivwO-</a> -
-                            <span class="text-gray-500 text-sm">Instagram</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.instagram.com/reel/DNNRplbpMNw/?igsh=NHN3a251N2tmZnlh" class="text-indigo-500 font-medium">Instagram Reel: DNNRplbpMNw</a> -
-                            <span class="text-gray-500 text-sm">Instagram</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.youtube.com/watch?v=JLqFmnNt3Fw" class="text-indigo-500 font-medium">YouTube Video: JLqFmnNt3Fw</a> -
-                            <span class="text-gray-500 text-sm">YouTube</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.youtube.com/watch?v=we-ze6q7eoc/" class="text-indigo-500 font-medium">YouTube Video: we-ze6q7eoc</a> -
-                            <span class="text-gray-500 text-sm">YouTube</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.thequint.com/entertainment/shock-rage-grief-sea-of-fans-bid-adieu-to-kannada-power-star-puneeth-rajkumar" class="text-indigo-500 font-medium">"Shock, Rage, Grief: Sea of fans bid adieu to Kannada power star Puneeth Rajkumar"</a> -
-                            <span class="text-gray-500 text-sm">The Quint</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.facebook.com/BQPrime/videos/584103326977187/?extid=NS-UNK-UNK-UNK-IOS_GK0T-GK1C&mibextid=1YhcI9R" class="text-indigo-500 font-medium">Facebook Video: BQPrime</a> -
-                            <span class="text-gray-500 text-sm">Facebook</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- More about Me Section -->
-            <div class="section-card rounded-lg border border-gray-200 transition">
-                <div class="collapsible-header flex items-center justify-between p-4 bg-gray-100 rounded-t-lg">
-                    <h2 class="text-xl font-semibold text-gray-700">More about Me</h2>
-                    <span class="arrow-icon text-gray-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                        </svg>
-                    </span>
-                </div>
-                <div class="link-list p-4 bg-white rounded-b-lg collapsed">
-                    <ul class="space-y-3">
-                        <li class="link-item text-gray-700">
-                            <a href="https://fightingtilotama.blogspot.com/" class="text-indigo-500 font-medium">"Personal Blog"</a> -
-                            <span class="text-gray-500 text-sm">fightingtilotama.blogspot.com</span>
-                        </li>
-                        <li class="link-item text-gray-700">
-                            <a href="https://www.linkedin.com/in/pratiba-raman/" class="text-indigo-500 font-medium">"LinkedIn Profile"</a> -
-                            <span class="text-gray-500 text-sm">linkedin.com/in/pratiba-raman</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Footer with Email -->
-    <footer class="mt-12 text-center py-6 bg-white rounded-xl shadow-lg max-w-3xl mx-auto">
-        <p class="text-gray-700 font-medium">Contact: 
-            <a href="mailto:pratiba.raman@gmail.com" class="text-indigo-500 hover:text-indigo-700 font-semibold underline transition">pratiba.raman@gmail.com</a>
-        </p>
-        <p class="text-xs text-gray-400 mt-2">© 2025 Pratiba Raman</p>
-    </footer>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const collapsibleHeaders = document.querySelectorAll('.collapsible-header');
-            collapsibleHeaders.forEach(header => {
-                header.addEventListener('click', () => {
-                    header.classList.toggle('collapsed');
-                    const linkList = header.nextElementSibling;
-                    linkList.classList.toggle('collapsed');
-                });
-            });
-            // Collapse all except first section (UAE Media Links)
-            document.querySelectorAll('.link-list').forEach((list, idx) => {
-                if (idx !== 0) list.classList.add('collapsed');
-            });
-            // Open Journalist Links section by default
-            const journoHeader = Array.from(document.querySelectorAll('.collapsible-header'))
-                .find(h => h.textContent.includes('Journalist Links'));
-            if (journoHeader) {
-                journoHeader.classList.remove('collapsed');
-                journoHeader.nextElementSibling.classList.remove('collapsed');
-            }
-        });
-    </script>
-</body>
-</html>
+           
